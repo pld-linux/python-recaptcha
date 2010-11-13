@@ -3,7 +3,7 @@ Summary:	A client for reCAPTCHA and reCAPTCHA Mailhide
 Summary(pl.UTF-8):	Klient usług reCAPTCHA i reCAPTCHA Mailhide
 Name:		python-recaptcha
 Version:	1.0.3
-Release:	2
+Release:	3
 License:	MIT
 Group:		Libraries/Python
 Source0:	http://pypi.python.org/packages/source/r/recaptcha-client/%{fname}-%{version}.tar.gz
