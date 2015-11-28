@@ -40,14 +40,11 @@ strony <http://mailhide.recaptcha.net/apikey>.
 %setup -qn %{fname}-%{version}
 
 %build
-%{__python} setup.py build
+%py_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__python} setup.py install \
-	--skip-build \
-	--optimize=2 \
-	--root=$RPM_BUILD_ROOT
+%py_install
 
 # structure of this module is an incredible fuckup. anyone knows how to fix this?
 cp -p recaptcha/__init__.py[co] $RPM_BUILD_ROOT%{py_sitescriptdir}/recaptcha
