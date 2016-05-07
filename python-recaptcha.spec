@@ -3,7 +3,7 @@ Summary:	A client for reCAPTCHA and reCAPTCHA Mailhide
 Summary(pl.UTF-8):	Klient usług reCAPTCHA i reCAPTCHA Mailhide
 Name:		python-recaptcha
 Version:	1.0.6
-Release:	4
+Release:	5
 License:	MIT
 Group:		Libraries/Python
 Source0:	http://pypi.python.org/packages/source/r/recaptcha-client/%{fname}-%{version}.tar.gz
@@ -47,8 +47,10 @@ rm -rf $RPM_BUILD_ROOT
 %py_install
 
 # structure of this module is an incredible fuckup. anyone knows how to fix this?
-cp -p recaptcha/__init__.py[co] $RPM_BUILD_ROOT%{py_sitescriptdir}/recaptcha
+cp -p recaptcha/__init__.py $RPM_BUILD_ROOT%{py_sitescriptdir}/recaptcha
 
+%py_comp $RPM_BUILD_ROOT%{py_sitescriptdir}/recaptcha
+%py_ocomp $RPM_BUILD_ROOT%{py_sitescriptdir}/recaptcha
 %py_postclean
 
 %clean
