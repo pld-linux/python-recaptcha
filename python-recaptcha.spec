@@ -19,21 +19,15 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Provides a CAPTCHA for Python using the reCAPTCHA service. Does not
 require any imaging libraries because the CAPTCHA is served directly
-from reCAPTCHA. Also allows you to securely obfuscate emails with
-Mailhide. This functionality requires pycrypto. This library requires
-two types of API keys. If you'd like to use the CAPTCHA, you'll need a
-key from <http://recaptcha.net/api/getkey>. For Mailhide, you'll need
-a key from <http://mailhide.recaptcha.net/apikey>.
+from reCAPTCHA. If you'd like to use the CAPTCHA, you'll need a key
+from <https://www.google.com/recaptcha/admin/create>.
 
 %description -l pl.UTF-8
 Ten moduł obsługuje CAPTCHA (kod do wpisania z obrazka) w Pythonie w
 oparciu o usługę reCAPTCHA. Nie wymaga żadnaj biblioteki graficznej,
-gdyż CAPTCHA serwowana jest bezpośrednio z reCAPTCHA. Pozwala również
-bezpiecznie ukryć adresy email za pomocą Mailhide. Ta funkcjonalność
-wymaga pycrypto. Do działania klienta niezbędne są dwa klucze. Aby
-używać CAPTCHA, należy pobrać klucz ze strony
-<http://recaptcha.net/api/getkey>. Dla Mailhide należy pobrać klucz ze
-strony <http://mailhide.recaptcha.net/apikey>.
+gdyż CAPTCHA serwowana jest bezpośrednio z reCAPTCHA. Aby używać
+CAPTCHA, należy pobrać klucz ze strony
+<https://www.google.com/recaptcha/admin/create>.
 
 %prep
 %setup -q
